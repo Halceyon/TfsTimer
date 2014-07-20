@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <title>TFS Timer</title>
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="padding-left: 2px; overflow: hidden;">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Project</label>
+            <div class="col-sm-10">
+                <select class="form-control" data-bind="options: sortedProjects, optionsText: 'Name', value: selectedProject, optionsCaption: 'Select...'"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Task</label>
+            <div class="col-sm-10">
+                <select class="form-control" data-bind="options: sortedWorkItems, optionsText: 'Title', value: selectedWorkItem"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Hours</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" data-bind="value: hours" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" data-bind="click: save">Save</button>
+            </div>
+        </div>
+    </form>
+    <div id="result"></div>
+    <script src="Scripts/knockout-3.1.0.js"></script>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="Scripts/underscore-min.js"></script>
+    <script src="Scripts/underscore-ko-1.6.0.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
